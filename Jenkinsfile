@@ -6,7 +6,7 @@ triggers {
     stages {
         stage('build') {
             steps {
-                sh 'docker image build -t praveenrajnikanth/workshop:store .'
+                sh 'docker image build -t praveenrajnikanth/workshop:store ./Dockerfile.base'
             }
         }
         stage('push') {
